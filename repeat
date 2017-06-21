@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class repeat{
+    public static void main(String a[]){
+        String d;
+        int i,j,f=0,c1=0,c2=0;
+        Scanner r=new Scanner(System.in);
+        d=r.nextLine();
+        d=d.replaceAll(" ","");
+        char x[]=d.toCharArray();
+       // int x[]={1,2,1,4,2,7};
+        for(i=0;i<x.length;i++){
+    f=0;
+            for(j=0;j<x.length;j++){
+            
+                if(x[i]==x[j]&&i!=j){
+                      f=1;
+                     
+                }
+            }
+                if(f==0)
+                c1++;
+                if(f==1)
+                c2++;
+            
+        }
+            System.out.println("counts for non repeating character:"+c1);
+             System.out.println("counts for repeating character:"+c2);
+            
+        
+        
+    }
+}
+output========
+ip===== find and go
+op=====counts for non repeating character:5 {f,i,a,g,o}
+       counts for repeating character:4{n,d,n,d}
